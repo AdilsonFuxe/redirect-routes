@@ -15,11 +15,11 @@ class App {
 
 
     routes(){
-        this.express.use(router);
         this.express.use(
             '/uploads', 
             express.static(path.resolve(__dirname, '..', 'uploads'))
-        );
+            );
+        this.express.use(router);
     }
 }
 
